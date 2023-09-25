@@ -1,0 +1,249 @@
+@font-face {
+    font-family: Gilroy;
+    src: url(./assests/font/Gilroy-Light.ttf);
+}
+
+*{
+    padding:0;
+    margin:0;
+    font-family: "Gilroy";
+    box-sizing: border-box;
+}
+html,body{
+    width:100%;
+    height:100%;
+}
+
+#main{
+    width:100%;
+    min-height:100vh;
+    background-color: #111;
+}
+#nav a{
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #fff;
+}
+#nav{
+    position: relative;
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    padding:0 6vw;
+    width:100%;
+    height:10vh;
+    color:white;
+}
+#nav a i{
+    margin-right: 1vw;
+    /* color:white; */
+}
+
+#center{
+    position: absolute;
+    display: flex;
+    gap:1vw;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+}
+
+#center #logo {
+    display: flex;
+    align-items: center;
+}
+
+#center #logo img{
+    object-fit: cover;
+    width:120px;
+    mix-blend-mode: multiply;
+    margin:0 20px;
+}
+
+#center #logo .line{
+    width:130px;
+    height:.1vh;
+    background-color: rgba(220,14,14);
+}
+
+#center a{
+    white-space: nowrap;
+}
+
+/* hero section */
+
+#hero{
+    width:100%;
+    min-height:90vh;
+    display: flex;
+    align-items: center;
+}
+
+#left{
+    width:calc(100%/3);
+    min-height: inherit;
+    color:#fff;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    padding:0 3vw;
+    line-height: 1;
+    
+}
+#ncenter{
+    width:calc(100%/3);
+    min-height: inherit;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#right{
+    width:calc(100%/3);
+    min-height: inherit;
+    position: relative;
+}
+#ncenter #tomb{
+    position:relative;
+    width:70%;
+    min-height:70vh;
+    background-color:goldenrod ;
+    border-top-left-radius: 500px;
+    border-top-right-radius: 500px;
+    background-image: url(./assests/img/coke-img.jpg);
+    background-size: cover;
+    /* filter:blur(.651px); */
+}
+#tomb #capsule{
+    width:45%;
+    height:3vw;
+    border-radius: 10vw;
+    position: absolute;
+    top:30%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding:0 1vh;
+    right:-30%;
+    color:#fff;
+    background-color: #333;
+}
+
+#tomb #photo{
+    width:2.5vw;
+    height:2.5vw;
+    border-radius: 50%;
+    overflow:hidden;
+    background-image: url(./assests/img/test.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+
+#capsule #txtap{
+    font-size: 1.9vh;
+}
+#left h1{
+    font-size: 2.5vw;
+    margin-bottom:1vw;
+    
+}
+#left p{
+    font-weight:100;
+    font-size:.9vw;
+    width:80%;
+}
+#left span{
+    color:red;
+    font-weight: 300;
+}
+
+#left button{
+    padding: 15px 32px;
+    
+    border: none;
+    outline: none;
+    border-radius: 100px;
+    background-color: rgb(196,20,20);
+    color:white;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    font-weight: 600;
+    text-transform: capitalize;
+    gap:.4vw;
+}
+
+#left .btn>i{
+    color:red;
+}
+#left .btn{
+    margin-top: 20px;
+    gap:.4vw;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+/* right */
+
+#rbottom{
+    width:80%;
+    bottom:10vh;
+    padding:0 5vw;
+    position: absolute;
+    /* height:3vw; */
+    font-size: .9vw;
+}
+
+#rbottom .row{
+    color:#fff;
+    display:flex;
+    justify-content: space-between;
+    opacity: .5;
+    border-bottom: 2px solid #444;
+    padding-bottom:.4vw;
+    align-items:center;
+    margin-bottom:3px;
+}
+
+#rbottom .row:nth-child(3){
+    opacity: 1;
+    border-bottom: initial;
+}
+
+#rbottom p{
+    color:#fff;
+}
+
+#rbottom #scroll{
+    margin-top:40px;
+    display:flex;
+    align-items: center;
+    /*justify-content: center; */
+    gap:1px;
+    color:#fff;
+}
+
+#rbottom .circle{
+    display: flex;
+    
+    align-items:center ;
+    justify-content: center;
+    width:50px;
+    height:50px;
+    border-radius: 50%;
+    border: 1px solid #333;
+}
+
+@media(max-width:500px) {
+    #nav #center a{display:none;}
+    #center #logo .line{
+        width:30px;
+    }
+    #center #logo img{
+        width:90px;
+        margin:0 5px;
+    }
+}
